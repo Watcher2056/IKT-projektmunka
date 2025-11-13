@@ -1,0 +1,2 @@
+# IKT projektmunka
+Novemberi projektmunka
