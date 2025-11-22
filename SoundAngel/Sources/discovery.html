@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discovery</title>
     <link rel="stylesheet" href="../Sources/discovery_style.css">
+    <script src="../Sources/discovery_script.js"></script>
 </head>
+
 <body>
     <div id="NavBar">
         <a href="../Sources/index.html">
@@ -25,6 +28,28 @@
         </a>
     </div>
 
-    <h1>Discovery</h1>
+        <div class="SlideShow">
+            <div class="SlideContainer">
+                <div class="Slides">
+                    <img src="../Images/RS_500_Great_Songs_1800x1200.webp" title="Carousel Image 1"
+                        alt="Carousel Image 1" width="100%" class="carousel_img">
+                </div>
+                <div class="Slides">
+                    <img src="../Images/attachment-YesSingles.jpg" title="Carousel Image 2" alt="Carousel Image 2"
+                        width="100%" class="carousel_img">
+                </div>
+                <div class="Slides">
+                    <img src="../Images/hd.jpg"
+                        title="Carousel Image 3" alt="Carousel Image 3" width="100%" class="carousel_img">
+                </div>
+            </div>
+
+            <div class="Dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
 </body>
+
 </html>
