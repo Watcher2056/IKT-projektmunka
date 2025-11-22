@@ -61,11 +61,63 @@ body {
 .Slides {
     min-width: 1000px;
     height: 600px;
+    position: relative;
 }
 
 .carousel_img {
     height: 600px;
     border-radius: 20px;
+}
+
+.slide-text {
+    position: absolute;
+    bottom: 60px;
+    left: 60px;
+    color: white;
+    z-index: 10;
+    max-width: 500px;
+
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+    animation: slideFade 1s ease both;
+}
+
+.slide-text h1 {
+    font-size: 48px;
+    margin: 0;
+    font-weight: 900;
+}
+
+.slide-text p {
+    font-size: 20px;
+    margin: 10px 0 20px 0;
+}
+
+.slide-button {
+    display: inline-block;
+    padding: 10px 22px;
+    font-size: 20px;
+    font-weight: 800;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: rgba(0,0,0,0.4);
+    backdrop-filter: blur(4px);
+    transition: 0.3s ease;
+}
+
+.slide-button:hover {
+    background-color: rgba(255,255,255,0.3);
+}
+
+@keyframes slideFade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .Dots {
