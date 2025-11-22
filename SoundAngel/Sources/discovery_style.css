@@ -112,3 +112,54 @@ body {
         opacity: 1
     }
 }
+
+.song {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.cover {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.cover:nth-child(2) {
+    transform: translateX(0px);
+    opacity: 0;
+    z-index: -1;
+}
+
+.cover:nth-child(3) {
+    transform: translateX(0px);
+    opacity: 0;
+    z-index: -2;
+}
+
+.cover:nth-child(4) {
+    transform: translateX(0px);
+    opacity: 0;
+    z-index: -3;
+}
+
+.song:hover .cover:nth-child(2) {
+    transform: translateX(160px);
+    opacity: 1;
+}
+
+.song:hover .cover:nth-child(3) {
+    transform: translateX(320px);
+    opacity: 1;
+}
+
+.song:hover .cover:nth-child(4) {
+    transform: translateX(480px);
+    opacity: 1;
+}
