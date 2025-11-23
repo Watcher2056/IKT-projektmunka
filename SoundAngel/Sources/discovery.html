@@ -28,7 +28,7 @@
             RAP
         </a>
     </div>
-    
+
     <div class="Container">
         <div class="SlideShow">
             <div class="SlideContainer">
@@ -52,24 +52,28 @@
                 <span class="dot" onclick="currentSlide(3)"></span>
             </div>
         </div>
-
         <div class="song-tile">
             <div class="covers-container">
-                <div class="cover main-cover" style="background-image: url('../Images/pop.jpg');"></div>
+                <div class="cover main-cover" id="Pop" style="background-image: url('../Images/pop.jpg');"></div>
                 <div class="cover song-cover" data-audio="../Audio/SpotiDownloader.com - Ordinary - Alex Warren.flac"
                     style="background-image: url('../Images/COVERREAL1.jpg');">
                     <button class="play-btn">▶</button>
                 </div>
-                <div class="cover song-cover" data-audio="../Audio/Just the Way You Are.mp3" style="background-image: url('../Images/COVERREAL2_.jpg');">
+                <div class="cover song-cover" data-audio="../Audio/Just the Way You Are.mp3"
+                    style="background-image: url('../Images/COVERREAL2_.jpg');">
                     <button class="play-btn">▶</button>
                 </div>
-                <div class="cover song-cover" data-audio="../Audio/Get Lucky (feat. Pharrell Williams and Nile Rodgers) - Daft Punk.mp3" style="background-image: url('../Images/COVERREAL3.jpg');">
+                <div class="cover song-cover"
+                    data-audio="../Audio/Get Lucky (feat. Pharrell Williams and Nile Rodgers) - Daft Punk.mp3"
+                    style="background-image: url('../Images/COVERREAL3.jpg');">
                     <button class="play-btn">▶</button>
                 </div>
-                <div class="cover song-cover" data-audio="../Audio/Bye Bye.mp3" style="background-image: url('../Images/COVERREAL4.jpg');">
+                <div class="cover song-cover" data-audio="../Audio/Bye Bye.mp3"
+                    style="background-image: url('../Images/COVERREAL4.jpg');">
                     <button class="play-btn">▶</button>
                 </div>
-                <div class="cover song-cover" data-audio="../Audio/SpotiDownloader.com - Umbrella - Rihanna.mp3" style="background-image: url('../Images/COVERREAL5.png');">
+                <div class="cover song-cover" data-audio="../Audio/SpotiDownloader.com - Umbrella - Rihanna.mp3"
+                    style="background-image: url('../Images/COVERREAL5.png');">
                     <button class="play-btn">▶</button>
                 </div>
             </div>
@@ -77,7 +81,7 @@
     </div>
     <footer>
         <p>
-            &copy; 2025 SoundAngel. All Rights Reserved. 
+            &copy; 2025 SoundAngel. All Rights Reserved.
         </p>
     </footer>
     <script>
@@ -88,7 +92,7 @@
             const audioSrc = cover.dataset.audio;
 
             if (audioSrc) {
-                
+
                 cover.audio = new Audio(audioSrc);
 
                 const btn = cover.querySelector('.play-btn');
@@ -96,11 +100,11 @@
                 btn.addEventListener('click', (e) => {
                     e.stopPropagation();
 
-                    
+
                     if (currentAudio && currentAudio !== cover.audio) {
                         currentAudio.pause();
                         currentBtn.textContent = "▶";
-                    } 
+                    }
                     if (cover.audio.paused) {
                         cover.audio.play();
                         btn.textContent = "⏸";
