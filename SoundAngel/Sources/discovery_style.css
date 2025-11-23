@@ -121,6 +121,10 @@ body {
     }
 }
 
+footer{
+    text-align: center;
+}
+
 .song-tile {
     width: 200px;
     height: 200px;
