@@ -8,6 +8,13 @@ body {
     background-color: #1b1d20;
 }
 
+.Container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
 #NavBar {
     position: sticky;
     top: 0;
@@ -42,4 +49,259 @@ body {
 
 #logo {
     height: 80px;
+
+}
+
+.SlideShow {
+    width: 1000px;
+    height: 600px;
+    position: relative;
+    margin: auto;
+    margin-top: 60px;
+    overflow: hidden;
+}
+
+.SlideContainer {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+}
+
+.Slides {
+    min-width: 1000px;
+    height: 600px;
+    position: relative;
+}
+
+.carousel_img {
+    height: 600px;
+    border-radius: 20px;
+}
+
+.Dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    opacity: 0.8;
+    transition: opacity 0.5s ease;
+}
+
+.dot {
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+    margin: 0 20px;
+    background-color: #4f4f4f;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #ffffff;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.song-tile {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    margin-left: 12.5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    position: relative;
+}
+
+.covers-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.cover {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    transition: transform 0.8s, opacity 0.3s;
+}
+
+.main-cover {
+    z-index: 10;
+}
+
+.play-btn {
+    position: absolute;
+    bottom: 35%;
+    right: 25%;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    font-size: 22px;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    cursor: pointer;
+    backdrop-filter: blur(3px);
+    transition: 0.2s;
+}
+
+.play-btn:hover {
+    transform: scale(1.1);
+    backdrop-filter: blur(6px);
+}
+
+.covers-container .cover:not(.main-cover) {
+    opacity: 0;
+    z-index: 5;
+    transform: translateX(0);
+}
+
+.covers-container:hover .cover:not(.main-cover) {
+    opacity: 1;
+}
+
+.covers-container .cover:nth-child(2) {
+    transform: translateX(0);
+    z-index: 9;
+    position: relative;
+    overflow: hidden;
+}
+
+.covers-container:hover .cover:nth-child(2) {
+    transform: translateX(140px);
+}
+
+.covers-container .cover:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border-radius: 20px;
+    pointer-events: none;
+    background: radial-gradient(circle, rgba(255,255,255,0) 45%, rgba(255,255,255,0.5) 100%);
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.covers-container .cover:nth-child(2):hover::after {
+    opacity: 1;
+}
+
+.covers-container .cover:nth-child(3) {
+    transform: translateX(0);
+    z-index: 8;
+}
+
+.covers-container:hover .cover:nth-child(3) {
+    transform: translateX(280px);
+}
+
+.covers-container .cover:nth-child(3)::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border-radius: 20px;
+    pointer-events: none;
+    background: radial-gradient(circle, rgba(255,255,255,0) 45%, rgba(255,255,255,0.5) 100%);
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.covers-container .cover:nth-child(3):hover::after {
+    opacity: 1;
+}
+
+.covers-container .cover:nth-child(4) {
+    transform: translateX(0);
+    z-index: 7;
+}
+
+.covers-container:hover .cover:nth-child(4) {
+    transform: translateX(420px);
+}
+
+.covers-container .cover:nth-child(4)::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border-radius: 20px;
+    pointer-events: none;
+    background: radial-gradient(circle, rgba(255,255,255,0) 45%, rgba(255,255,255,0.5) 100%);
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.covers-container .cover:nth-child(4):hover::after {
+    opacity: 1;
+}
+
+.covers-container .cover:nth-child(5) {
+    transform: translateX(0);
+    z-index: 6;
+}
+
+.covers-container:hover .cover:nth-child(5) {
+    transform: translateX(560px);
+}
+
+.covers-container .cover:nth-child(5)::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border-radius: 20px;
+    pointer-events: none;
+    background: radial-gradient(circle, rgba(255,255,255,0) 45%, rgba(255,255,255,0.5) 100%);
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.covers-container .cover:nth-child(5):hover::after {
+    opacity: 1;
+}
+
+.covers-container .cover:nth-child(6) {
+    transform: translateX(0);
+    z-index: 5;
+}
+
+.covers-container:hover .cover:nth-child(6) {
+    transform: translateX(700px);
+}
+
+.covers-container .cover:nth-child(6)::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border-radius: 20px;
+    pointer-events: none;
+    background: radial-gradient(circle, rgba(255,255,255,0) 45%, rgba(255,255,255,0.5) 100%);
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.covers-container .cover:nth-child(6):hover::after {
+    opacity: 1;
 }
