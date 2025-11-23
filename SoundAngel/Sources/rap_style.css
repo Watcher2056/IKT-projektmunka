@@ -1,0 +1,45 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #1b1d20;
+}
+
+#NavBar {
+    position: sticky;
+    top: 0;
+    background-color: #C8D7EB;
+    display: flex;
+    align-items: center;
+    z-index: 50;
+}
+
+#NavBar a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #4f4f4f;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bolder;
+    font-weight: 900;
+    padding: 10px;
+}
+
+#NavBar a:hover {
+    background-color: #A7C0E0;
+    color: #000000;
+}
+
+#NavBar a:active {
+    background-color: #7E9BBF;
+    color: #FFFFFF;
+}
+
+#logo {
+    height: 80px;
+}
