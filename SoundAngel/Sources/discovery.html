@@ -28,35 +28,84 @@
         </a>
     </div>
 
-    <div class="SlideShow">
-        <div class="SlideContainer">
-            <div class="Slides">
-                <img src="../Images/RS_500_Great_Songs_1800x1200.webp" title="Carousel Image 1" alt="Carousel Image 1"
-                    width="100%" class="carousel_img">
+    <div class="Container">
+        <div class="SlideShow">
+            <div class="SlideContainer">
+                <div class="Slides">
+                    <img src="../Images/RS_500_Great_Songs_1800x1200.webp" title="Carousel Image 1"
+                        alt="Carousel Image 1" width="100%" class="carousel_img">
+                </div>
+                <div class="Slides">
+                    <img src="../Images/attachment-YesSingles.jpg" title="Carousel Image 2" alt="Carousel Image 2"
+                        width="100%" class="carousel_img">
+                </div>
+                <div class="Slides">
+                    <img src="../Images/hd.jpg" title="Carousel Image 3" alt="Carousel Image 3" width="100%"
+                        class="carousel_img">
+                </div>
             </div>
-            <div class="Slides">
-                <img src="../Images/attachment-YesSingles.jpg" title="Carousel Image 2" alt="Carousel Image 2"
-                    width="100%" class="carousel_img">
-            </div>
-            <div class="Slides">
-                <img src="../Images/hd.jpg" title="Carousel Image 3" alt="Carousel Image 3" width="100%"
-                    class="carousel_img">
+
+            <div class="Dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
             </div>
         </div>
 
-        <div class="Dots">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
+        <div class="song-tile">
+            <div class="covers-container">
+                <div class="cover main-cover" style="background-image: url('../Images/pop.jpg');"></div>
+                <div class="cover song-cover" data-audio="../Audio/SpotiDownloader.com - Ordinary - Alex Warren.flac"
+                    style="background-image: url('../Images/COVERREAL1.jpg');">
+                    <button class="play-btn">▶</button>
+                </div>
+                <div class="cover song-cover" style="background-image: url('../Images/COVERREAL2_.jpg');"></div>
+                <div class="cover song-cover" style="background-image: url('../Images/COVERREAL3.jpg');"></div>
+                <div class="cover song-cover" style="background-image: url('../Images/COVERREAL4.jpg');"></div>
+                <div class="cover song-cover" style="background-image: url('../Images/COVERREAL5.png');"></div>
+            </div>
         </div>
     </div>
 
-    <div class="song">
-        <div class="cover" style="background-image: url('../Images/cover1webp.webp');"></div>
-        <div class="cover" style="background-image: url('../Images/cover2.webp');"></div>
-        <div class="cover" style="background-image: url('../Images/cover3.jpg');"></div>
-        <div class="cover" style="background-image: url('../Images/cover4.jpg');"></div>
-    </div>
+    <script>
+        let currentAudio = null;
+        let currentBtn = null;
+
+        document.querySelectorAll('.song-cover').forEach(cover => {
+            const audioSrc = cover.dataset.audio;
+
+            if (audioSrc) {
+                
+                cover.audio = new Audio(audioSrc);
+
+                const btn = cover.querySelector('.play-btn');
+
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+
+                    
+                    if (currentAudio && currentAudio !== cover.audio) {
+                        currentAudio.pause();
+                        currentBtn.textContent = "▶";
+                    } 
+                    if (cover.audio.paused) {
+                        cover.audio.play();
+                        btn.textContent = "⏸";
+
+                        currentAudio = cover.audio;
+                        currentBtn = btn;
+                    } else {
+                        cover.audio.pause();
+                        btn.textContent = "▶";
+
+                        currentAudio = null;
+                        currentBtn = null;
+                    }
+                });
+            }
+        });
+    </script>
+
 </body>
 
 </html>
