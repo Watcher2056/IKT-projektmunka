@@ -30,11 +30,11 @@ body {
     color: #4f4f4f;
     display: flex;
     align-items: center;
-    height: 100px;
+    height: 50px;
     font-size: 20px;
     font-weight: bolder;
     font-weight: 900;
-    padding: 20px;
+    padding: 10px;
 }
 
 #NavBar a:hover {
@@ -303,4 +303,5 @@ body {
 
 .covers-container .cover:nth-child(6):hover::after {
     opacity: 1;
+    height: 80px;
 }
