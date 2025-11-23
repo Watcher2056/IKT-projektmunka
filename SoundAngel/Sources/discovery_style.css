@@ -48,7 +48,7 @@ body {
 }
 
 #logo {
-    height: 100px;
+    height: 80px;
 }
 
 .SlideShow {
@@ -118,6 +118,10 @@ body {
     to {
         opacity: 1
     }
+}
+
+footer{
+    text-align: center;
 }
 
 .song-tile {
@@ -303,5 +307,4 @@ body {
 
 .covers-container .cover:nth-child(6):hover::after {
     opacity: 1;
-    height: 80px;
 }
