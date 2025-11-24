@@ -21,7 +21,7 @@ body {
     background-color: #C8D7EB;
     display: flex;
     align-items: center;
-    z-index: 50;
+    z-index: 49;
 }
 
 #NavBar a {
