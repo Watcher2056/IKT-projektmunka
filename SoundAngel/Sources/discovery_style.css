@@ -308,3 +308,10 @@ footer{
 .covers-container .cover:nth-child(6):hover::after {
     opacity: 1;
 }
+
+.PlayBackBar {
+    background-color: #0c0c0c;
+    margin: 0;
+    position: sticky;
+    top: 0;
+}
