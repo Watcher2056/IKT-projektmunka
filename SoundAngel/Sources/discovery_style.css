@@ -211,7 +211,7 @@ footer {
     transition: opacity 0.6s ease;
 }
 
-.covers-container .cover:nth-child(2).opened::after {
+.covers-container .cover:nth-child(2):hover::after {
     opacity: 1;
 }
 
@@ -238,7 +238,7 @@ footer {
     transition: opacity 0.6s ease;
 }
 
-.covers-container .cover:nth-child(3).opened::after {
+.covers-container .cover:nth-child(3):hover::after {
     opacity: 1;
 }
 
@@ -265,7 +265,7 @@ footer {
     transition: opacity 0.6s ease;
 }
 
-.covers-container .cover:nth-child(4).opened::after {
+.covers-container .cover:nth-child(4):hover::after {
     opacity: 1;
 }
 
@@ -292,7 +292,7 @@ footer {
     transition: opacity 0.6s ease;
 }
 
-.covers-container .cover:nth-child(5).opened::after {
+.covers-container .cover:nth-child(5):hover::after {
     opacity: 1;
 }
 
@@ -319,7 +319,7 @@ footer {
     transition: opacity 0.6s ease;
 }
 
-.covers-container .cover:nth-child(6).opened::after {
+.covers-container .cover:nth-child(6):hover::after {
     opacity: 1;
 }
 
@@ -369,6 +369,7 @@ footer {
 
 .CenterSection {
     justify-content: center;
+    margin-left: 350px;
 }
 
 .RightSection {
@@ -463,4 +464,19 @@ footer {
 /* FIREFOX HOVER */
 .VolumeSlider:hover::-moz-range-track {
     background: #00b118;
+}
+
+.NowPlayingSection {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#NowPlayingText {
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Cunia', sans-serif;
+    white-space: nowrap;
 }

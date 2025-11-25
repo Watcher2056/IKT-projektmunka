@@ -56,7 +56,7 @@
         <div class="song-tile">
             <div class="covers-container">
                 <div class="cover main-cover" id="Mood" style="background-image: url('../Images/mood.png');"></div>
-                <div class="cover song-cover" data-audio="../Audio/Sweater Weather.mp3"
+                <div class="cover song-cover" data-audio="../Audio/Sweater Weather.mp3" data-artist="The Neighbourhood" data-title="Sweater Weather"
                     style="background-image: url('../Images/sweater_weather.jpg');">
                     <button class="play-btn">▶</button>
                 </div>
@@ -304,25 +304,38 @@
     </footer>
 
     <div class="PlayBackBar">
-        <div class="LeftSection"></div>
 
-        <div class="CenterSection">
-            <div class="play-like-wrapper">
-                <img src="../Images/like.png" class="LikeButton">
+    <div class="LeftSection"></div>
 
-                <button id="PlayBackPlayButton">
-                    <span class="symbol">▶</span>
-                </button>
-            </div>
-        </div>
+    <div class="CenterSection">
+        <div class="play-like-wrapper">
+            <img src="../Images/like.png" class="LikeButton">
 
-        <div class="RightSection">
-            <img src="../Images/volume_white.png" class="VolumeIcon">
-            <input class="VolumeSlider" type="range" min="0" max="100" value="50">
+            <button id="PlayBackPlayButton">
+                <span class="symbol">▶</span>
+            </button>
         </div>
     </div>
 
+    <div class="NowPlayingSection">
+        <span id="NowPlayingText"></span>
+    </div>
+
+    <div class="RightSection">
+        <img src="../Images/volume_white.png" class="VolumeIcon">
+        <input class="VolumeSlider" type="range" min="0" max="100" value="50">
+    </div>
+
+</div>
+
     <script>
+        function updateNowPlaying(coverElement) {
+    const artist = coverElement.dataset.artist || "Unknown Artist";
+    const title = coverElement.dataset.title || "Unknown Title";
+
+    document.getElementById("NowPlayingText").textContent = `${artist} – ${title}`;
+}
+
         const player = new Audio();
 
         const barPlayBtn = document.getElementById("PlayBackPlayButton");
@@ -345,6 +358,8 @@
                 if (currentAudioSrc !== audioSrc) {
                     player.src = audioSrc;
                     player.play();
+
+                    updateNowPlaying(cover);
 
                     if (currentBtn) currentBtn.textContent = "▶";
 
@@ -396,10 +411,6 @@
         document.querySelectorAll(".covers-container").forEach(container => {
             container.addEventListener("mouseenter", () => {
                 container.classList.add("opened");
-            });
-
-            container.addEventListener("click", () => {
-                container.classList.toggle("opened");
             });
         });
     </script>
