@@ -330,6 +330,7 @@ footer {
     left: 0;
     z-index: 100;
     width: 100%;
+    height: 70px;
     display: flex;
     align-items: center;
 }
@@ -389,6 +390,7 @@ footer {
     align-items: center;
     justify-content: center;
     gap: 35px;
+    margin-bottom: 20px;
 }
 
 
@@ -478,4 +480,55 @@ footer {
     font-weight: 600;
     font-family: 'Cunia', sans-serif;
     white-space: nowrap;
+}
+
+.TimeStamp {
+    position: absolute;
+    left: 815px;
+    width: 250px;
+    height: 6px;
+    border-radius: 5px;
+    outline: none;
+    background-color: #383838;
+    margin-top: 40px;
+}
+
+/* CHROME LINE*/
+.TimeStamp::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    width: 250px;
+    height: 6px;
+    border-radius: 5px;
+    outline: none;
+    background-color: #383838;
+}
+
+/* CHROME SLIDER */
+.TimeStamp::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    background: #ffffff;
+    border-radius: 50%;
+    margin-top: -5px;
+    outline: none;
+}
+
+/* FIREFOX LINE */
+.TimeStamp::-moz-range-track {
+    width: 250px;
+    height: 6px;
+    border-radius: 5px;
+    outline: none;
+    background-color: #383838;
+}
+
+/* FIREFOX SLIDER */
+.TimeStamp::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: #ffffff;
+    border-radius: 50%;
+    margin-top: -5px;
+    outline: none;
 }
