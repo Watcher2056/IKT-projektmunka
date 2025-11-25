@@ -309,6 +309,7 @@
         </div>
     </div>
 
+    <footer style="margin-top: 20px; margin-bottom: 100px;">
         <p>
             &copy; 2025 SoundAngel. All Rights Reserved.
         </p>
@@ -316,6 +317,9 @@
 
     <div class="PlayBackBar">
 
+        <div class="LeftSection">
+            <input class="TimeStamp" id="TimeStamp" type="range" min="0" max="400" value="0">
+        </div>
 
         <div class="CenterSection">
             <div class="play-like-wrapper">
@@ -347,6 +351,27 @@
         }
 
         const player = new Audio();
+
+        const timeStamp = document.getElementById("TimeStamp");
+
+        player.addEventListener("loadedmetadata", () => {
+            timeStamp.max = Math.floor(player.duration);
+        });
+
+        player.addEventListener("timeupdate", () => {
+            if (!timeStamp.dragging) {
+                timeStamp.value = Math.floor(player.currentTime);
+            }
+        });
+
+        timeStamp.addEventListener("mousedown", () => {
+            timeStamp.dragging = true;
+
+            timeStamp.addEventListener("mouseup", (e) => {
+                timeStamp.dragging = false;
+                player.currentTime = timeStamp.value;
+            });
+        });
 
         const barPlayBtn = document.getElementById("PlayBackPlayButton");
         const barPlayBtnSpan = barPlayBtn.querySelector(".symbol");
