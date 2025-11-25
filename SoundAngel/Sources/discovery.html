@@ -64,8 +64,7 @@
                     style="background-image: url('../Images/Champagne\ Coast.jpg');">
                     <button class="play-btn">▶</button>
                 </div>
-                <div class="cover song-cover"
-                    data-audio="../Audio/Iris.mp3"
+                <div class="cover song-cover" data-audio="../Audio/Iris.mp3"
                     style="background-image: url('../Images/Iris.jpg');">
                     <button class="play-btn">▶</button>
                 </div>
@@ -82,7 +81,8 @@
 
         <div class="song-tile">
             <div class="covers-container">
-                <div class="cover main-cover" id="Country" style="background-image: url('../Images/country.jpg');"></div>
+                <div class="cover main-cover" id="Country" style="background-image: url('../Images/country.jpg');">
+                </div>
                 <div class="cover song-cover" data-audio="../Audio/Something in the Orange - Zach Bryan.mp3"
                     style="background-image: url('../Images/Cover\ of\ Something\ in\ the\ Orange\ by\ Zach\ Bryan.jpg');">
                     <button class="play-btn">▶</button>
@@ -108,7 +108,8 @@
 
         <div class="song-tile">
             <div class="covers-container">
-                <div class="cover main-cover" id="Romance" style="background-image: url('../Images/romantic.jpg');"></div>
+                <div class="cover main-cover" id="Romance" style="background-image: url('../Images/romantic.jpg');">
+                </div>
                 <div class="cover song-cover" data-audio="../Audio/SpotiDownloader.com - Ordinary - Alex Warren.flac"
                     style="background-image: url('../Images/COVERREAL1.jpg');">
                     <button class="play-btn">▶</button>
@@ -134,7 +135,8 @@
 
         <div class="song-tile">
             <div class="covers-container">
-                <div class="cover main-cover" id="Classical" style="background-image: url('../Images/classical.jpg');"></div>
+                <div class="cover main-cover" id="Classical" style="background-image: url('../Images/classical.jpg');">
+                </div>
                 <div class="cover song-cover"
                     data-audio="../Audio/Cello Suite No. 1 in G Major, BWV 1007_ I. Prélude - Johann Sebastian Bach.mp3"
                     style="background-image: url('../Images/Cover\ of\ Cello\ Suite\ No.\ 1\ in\ G\ Major\,\ BWV\ 1007_\ I.\ Prélude\ by\ Johann\ Sebastian\ Bach\,\ Yo-Yo\ Ma.jpg');">
@@ -190,8 +192,9 @@
 
         <div class="song-tile">
             <div class="covers-container">
-                <div class="cover main-cover" id="Workout" style="background-image: url('../Images/workout.jpg');"></div>
-                <div class="cover song-cover" data-audio="../Audio/fragment - slowed - slxughter.mp3" 
+                <div class="cover main-cover" id="Workout" style="background-image: url('../Images/workout.jpg');">
+                </div>
+                <div class="cover song-cover" data-audio="../Audio/fragment - slowed - slxughter.mp3"
                     style="background-image: url('../Images/Cover\ of\ fragment\ -\ slowed\ by\ slxughter.jpg');">
                     <button class="play-btn">▶</button>
                 </div>
@@ -199,8 +202,7 @@
                     style="background-image: url('../Images/Cover\ of\ We\ Fell\ Apart\ -\ Slowed\ by\ ANGUISH\,\ AmbVsh\,\ ily.jpg');">
                     <button class="play-btn">▶</button>
                 </div>
-                <div class="cover song-cover"
-                    data-audio="../Audio/Angel - Massive Attack.mp3"
+                <div class="cover song-cover" data-audio="../Audio/Angel - Massive Attack.mp3"
                     style="background-image: url('../Images/Cover\ of\ Angel\ by\ Massive\ Attack\,\ Horace\ Andy.jpg');">
                     <button class="play-btn">▶</button>
                 </div>
@@ -217,8 +219,9 @@
 
         <div class="song-tile">
             <div class="covers-container">
-                <div class="cover main-cover" id="Hardcore" style="background-image: url('../Images/hardcore.png');"></div>
-                <div class="cover song-cover" data-audio="../Audio/Hit The Floor - Bloodlust.mp3" 
+                <div class="cover main-cover" id="Hardcore" style="background-image: url('../Images/hardcore.png');">
+                </div>
+                <div class="cover song-cover" data-audio="../Audio/Hit The Floor - Bloodlust.mp3"
                     style="background-image: url('../Images/Cover\ of\ Hit\ The\ Floor\ by\ Bloodlust\,\ HOLY\ PRIEST.jpg');">
                     <button class="play-btn">▶</button>
                 </div>
@@ -226,8 +229,7 @@
                     style="background-image: url('../Images/Cover\ of\ Attack\ -\ Remastered\ by\ Unexist.jpg');">
                     <button class="play-btn">▶</button>
                 </div>
-                <div class="cover song-cover"
-                    data-audio="../Audio/Vielleicht Vielleicht - Holy Priest.mp3"
+                <div class="cover song-cover" data-audio="../Audio/Vielleicht Vielleicht - Holy Priest.mp3"
                     style="background-image: url('../Images/Cover\ of\ Vielleicht\ Vielleicht\ -\ Holy\ Priest.jpg');">
                     <button class="play-btn">▶</button>
                 </div>
@@ -389,6 +391,16 @@
             barPlayBtnSpan.textContent = "▶";
             barPlayBtnSpan.classList.remove("pause");
             if (currentBtn) currentBtn.textContent = "▶";
+        });
+
+        document.querySelectorAll(".covers-container").forEach(container => {
+            container.addEventListener("mouseenter", () => {
+                container.classList.add("opened");
+            });
+
+            container.addEventListener("click", () => {
+                container.classList.toggle("opened");
+            });
         });
     </script>
 

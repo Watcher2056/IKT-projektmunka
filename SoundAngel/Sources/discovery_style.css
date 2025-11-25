@@ -171,7 +171,7 @@ footer {
     transition: 0.2s;
 }
 
-.play-btn:hover {
+.play-btn.opened {
     transform: scale(1.1);
     backdrop-filter: blur(6px);
 }
@@ -182,7 +182,7 @@ footer {
     transform: translateX(0);
 }
 
-.covers-container:hover .cover:not(.main-cover) {
+.covers-container.opened .cover:not(.main-cover) {
     opacity: 1;
 }
 
@@ -193,7 +193,7 @@ footer {
     overflow: hidden;
 }
 
-.covers-container:hover .cover:nth-child(2) {
+.covers-container.opened .cover:nth-child(2) {
     transform: translateX(140px);
 }
 
@@ -211,7 +211,7 @@ footer {
     transition: opacity 0.6s ease;
 }
 
-.covers-container .cover:nth-child(2):hover::after {
+.covers-container .cover:nth-child(2).opened::after {
     opacity: 1;
 }
 
@@ -220,7 +220,7 @@ footer {
     z-index: 8;
 }
 
-.covers-container:hover .cover:nth-child(3) {
+.covers-container.opened .cover:nth-child(3) {
     transform: translateX(280px);
 }
 
@@ -238,7 +238,7 @@ footer {
     transition: opacity 0.6s ease;
 }
 
-.covers-container .cover:nth-child(3):hover::after {
+.covers-container .cover:nth-child(3).opened::after {
     opacity: 1;
 }
 
@@ -247,7 +247,7 @@ footer {
     z-index: 7;
 }
 
-.covers-container:hover .cover:nth-child(4) {
+.covers-container.opened .cover:nth-child(4) {
     transform: translateX(420px);
 }
 
@@ -265,7 +265,7 @@ footer {
     transition: opacity 0.6s ease;
 }
 
-.covers-container .cover:nth-child(4):hover::after {
+.covers-container .cover:nth-child(4).opened::after {
     opacity: 1;
 }
 
@@ -274,7 +274,7 @@ footer {
     z-index: 6;
 }
 
-.covers-container:hover .cover:nth-child(5) {
+.covers-container.opened .cover:nth-child(5) {
     transform: translateX(560px);
 }
 
@@ -292,7 +292,7 @@ footer {
     transition: opacity 0.6s ease;
 }
 
-.covers-container .cover:nth-child(5):hover::after {
+.covers-container .cover:nth-child(5).opened::after {
     opacity: 1;
 }
 
@@ -301,7 +301,7 @@ footer {
     z-index: 5;
 }
 
-.covers-container:hover .cover:nth-child(6) {
+.covers-container.opened .cover:nth-child(6) {
     transform: translateX(700px);
 }
 
@@ -319,7 +319,7 @@ footer {
     transition: opacity 0.6s ease;
 }
 
-.covers-container .cover:nth-child(6):hover::after {
+.covers-container .cover:nth-child(6).opened::after {
     opacity: 1;
 }
 
