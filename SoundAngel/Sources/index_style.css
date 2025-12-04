@@ -59,12 +59,13 @@ body {
 }
 
 .SlideShow {
-    width: 1000px;
-    height: 600px;
+    width: 100%;
+    max-width: 1000px;
+    aspect-ratio: 16 / 9;
     position: relative;
-    margin: auto;
-    margin-top: 60px;
+    margin: 60px auto 0 auto;
     overflow: hidden;
+    border-radius: 20px;
 }
 
 .SlideContainer {
@@ -73,43 +74,42 @@ body {
 }
 
 .Slides {
-    min-width: 1000px;
-    height: 600px;
+    min-width: 100%;
     position: relative;
 }
 
 .carousel_img {
-    height: 600px;
-    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .slide-text {
     position: absolute;
-    bottom: 60px;
-    left: 60px;
+    bottom: 20%;
+    left: 5%;
     color: white;
     z-index: 10;
-    max-width: 500px;
+    max-width: 70%;
 
     text-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
     animation: slideFade 1s ease both;
 }
 
 .slide-text h1 {
-    font-size: 48px;
+    font-size: clamp(16px, 4vw, 48px);
     margin: 0;
     font-weight: 900;
 }
 
 .slide-text p {
-    font-size: 20px;
+    font-size: clamp(14px, 2vw, 20px);
     margin: 10px 0 20px 0;
 }
 
 .slide-button {
-    display: inline-block;
-    padding: 10px 22px;
-    font-size: 20px;
+    padding: 8px 18px;
+    font-size: clamp(8px, 2.5vw, 20px);
     font-weight: 800;
     border-radius: 12px;
     text-decoration: none;
@@ -136,15 +136,13 @@ body {
 
 .Dots {
     position: absolute;
-    bottom: 15px;
+    bottom: 10px;
     left: 50%;
-    transform: translateX(-50%);
     display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
+    transform: translateX(-50%);
     opacity: 0.8;
     transition: opacity 0.5s ease;
+    gap: 12px;
 }
 
 .dot {
@@ -154,7 +152,6 @@ body {
     margin: 0 20px;
     background-color: #4f4f4f;
     border-radius: 50%;
-    display: inline-block;
     transition: background-color 0.6s ease;
 }
 
@@ -181,15 +178,12 @@ body {
 .exploremusic {
     display: flex;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: 60px;
+    margin-top: 40px;
 }
 
 .discovery-button {
-    display: inline-block;
     padding: 10px 20px;
-    font-size: 32px;
+    font-size: clamp(20px, 5vw, 32px);
     font-weight: 900;
     color: #4f4f4f;
     background-color: #C8D7EB;
