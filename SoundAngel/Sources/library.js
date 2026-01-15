@@ -1,0 +1,64 @@
+// SoundAngel – Playlist Creation Only
+
+// Load playlists from localStorage or initialize
+let playlists = JSON.parse(localStorage.getItem("lib_playlists") || '{"My Playlist": []}');
+
+function savePlaylists(){
+  localStorage.setItem("lib_playlists", JSON.stringify(playlists));
+}
+
+function renderPlaylists(){
+  const wrap = document.getElementById('playlistCards');
+  if (!wrap) return;
+  wrap.innerHTML = "";
+
+  // New Playlist card
+  const addCard = document.createElement('div');
+  addCard.className = 'playlist-card';
+  addCard.innerHTML = `
+    <div class="card" id="New-list" style="width: 18rem;">
+  <img src="../Images/Plus icon.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <div class="playlist-card-name text-center"><h5>New Playlist</h5></div>
+  </div>
+</div>
+    
+  `;
+  addCard.onclick = () => {
+    const name = prompt("Playlist name:");
+    if (!name || playlists[name]) return;
+    playlists[name] = [];
+    savePlaylists();
+    renderPlaylists();
+  };
+  wrap.appendChild(addCard);
+
+  // Existing playlists
+  Object.keys(playlists).forEach(name => {
+    const card = document.createElement('div');
+    card.className = 'playlist-card';
+    card.innerHTML = `
+      <div class="card" style="width: 18rem;">
+  <img src="../Images/Plus icon.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <div class="playlist-card-name">${name}</div>
+    <button class="btn btn-danger" data-del>Delete</button>
+  </div>
+</div>
+      
+    `;
+
+      card.querySelector('[data-del]').onclick = (e) => {
+      e.stopPropagation();
+      if (!confirm(`Delete playlist '${name}'?`)) return;
+      delete playlists[name];
+      savePlaylists();
+      renderPlaylists();
+        };
+
+    wrap.appendChild(card);
+  });
+}
+
+// Initial render
+document.addEventListener('DOMContentLoaded', renderPlaylists);

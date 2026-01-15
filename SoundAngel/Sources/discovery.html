@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discovery</title>
+    <link rel="stylesheet" href="../Sources/discovery_style.css">
+    <link rel="icon" href="/SoundAngel/Images/logoico.ico">
+    <script src="../Sources/discovery_script.js"></script>
+</head>
+
+<body>
+    <div id="NavBar">
+        <a href="../Sources/index.html">
+            <img src="../Images/LogLogLog.png" title="SoundAngel Logo" alt="SoundAngel Logo" id="logo">
+        </a>
+        <a href="../Sources/discovery.html">
+            DISCOVERY
+        </a>
+        <a href="../Sources/library.html">
+            LIBRARY
+        </a>
+</div>
+
+    <div class="Container">
+        <div class="SlideShow">
+            <div class="SlideContainer">
+                <div class="Slides">
+                    <img src="../Images/RS_500_Great_Songs_1800x1200.webp" title="Carousel Image 1"
+                        alt="Carousel Image 1" width="100%" class="carousel_img">
+                </div>
+                <div class="Slides">
+                    <img src="../Images/attachment-YesSingles.jpg" title="Carousel Image 2" alt="Carousel Image 2"
+                        width="100%" class="carousel_img">
+                </div>
+                <div class="Slides">
+                    <img src="../Images/hd.jpg" title="Carousel Image 3" alt="Carousel Image 3" width="100%"
+                        class="carousel_img">
+                </div>
+            </div>
+
+            <div class="Dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+
+        <div class="song-tile">
+            <div class="covers-container">
+                <div class="cover main-cover" id="Mood" style="background-image: url('../Images/mood.png');"></div>
+                <div class="cover song-cover" data-audio="../Audio/Sweater Weather.mp3" data-artist="The Neighbourhood"
+                    data-title="Sweater Weather" style="background-image: url('../Images/sweater_weather.jpg');">
+                    <button class="play-btn">▶</button>
+                </div>
+                <div class="cover song-cover" data-audio="../Audio/Champagne Coast.mp3" data-artist="Blood Orange"
+                    data-title="Champagne Coast" style="background-image: url('../Images/Champagne\ Coast.jpg');">
+                    <button class="play-btn">▶</button>
+                </div>
+                <div class="cover song-cover" data-audio="../Audio/Iris.mp3" data-artist="The Goo Goo Dolls"
+                    data-title="Iris" style="background-image: url('../Images/Iris.jpg');">
+                    <button class="play-btn">▶</button>
+                </div>
+                <div class="cover song-cover" data-audio="../Audio/Fade Into You.mp3" data-artist="Mazzy Star"
+                    data-title="Fade Into You" style="background-image: url('../Images/Fade\ Into\ Your.jpg');">
+                    <button class="play-btn">▶</button>
+                </div>
+                <div class="cover song-cover" data-audio="../Audio/Do I Wanna Know.mp3" data-artist="Arctic Monkeys"
+                    data-title="Do I Wanna Know" style="background-image: url('../Images/Do\ I\ Wanna\ Know.jpg');">
+                    <button class="play-btn">▶</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="song-tile">
+            <div class="covers-container">
+                <div class="cover main-cover" id="Country" style="background-image: url('../Images/country.jpg');">
+                </div>
+                <div class="cover song-cover" data-audio="../Audio/Something in the Orange - Zach Bryan.mp3"
+                    data-artist="Zach Bryan" data-title="Something in the Orange"
+                    style="background-image: url('../Images/Cover\ of\ Something\ in\ the\ Orange\ by\ Zach\ Bryan.jpg');">
+                    <button class="play-btn">▶</button>
+                </div>
+                <div class="cover song-cover" data-audio="../Audio/American Pie - Don McLean.mp3" data-artist="Don McLean"
+                    data-title="American Pie"
+                    style="background-image: url('../Images/Cover\ of\ American\ Pie\ by\ Don\ McLean.jpg');">
+                    <button class="play-btn">▶</button>
+                </div>
+                <div class="cover song-cover" data-audio="../Audio/Indigo (feat. Avery Anna) - Sam Barber.mp3"
+                    data-artist="Sam Barber" data-title="Indigo (feat. Avery Anna)"
+                    style="background-image: url('../Images/Cover\ of\ Indigo\ \(feat.\ Avery\ Anna\)\ by\ Sam\ Barber\,\ Avery\ Anna.jpg');">
+                    <button class="play-btn">▶</button>
+                </div>
+                <div class="cover song-cover" data-audio="../Audio/Wondering Why - The Red Clay Strays.mp3"
+                    data-artist="The Red Clay Strays" data-title="Wondering Why"
+                    style="background-image: url('../Images/Cover\ of\ Wondering\ Why\ by\ The\ Red\ Clay\ Strays.jpg');">
+                    <button class="play-btn">▶</button>
+                </div>
+                <div class="cover song-cover" data-audio="../Audio/Tennessee Whiskey - Chris Stapleton.mp3"
+                    data-artist="Crhis Stapleton" data-title="Tennesse Whiskey"
+                    style="background-image: url('../Images/Cover\ of\ Tennessee\ Whiskey\ by\ Chris\ Stapleton.jpg');">
+                    <button class="play-btn">▶</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="song-tile">
+            <div class="covers-container">
+                <div class="cover main-cover" id="Romance" style="background-image: url('../Images/romantic.jpg');">
+                </div>
+                <div class="cover song-cover" data-audio="../Audio/SpotiDownloader.com - Ordinary - Alex Warren.flac"
+                    data-artist="Alex Warren" data-title="Ordinary"
+                    style="background-image: url('../Images/COVERREAL1.jpg');">
+                    <button class="play-btn">▶</button>
+                </div>
+                <div class="cover song-cover" data-audio="../Audio/Just the Way You Are.mp3" data-artist="Bruno Mars"
+                    data-title="Just the Way You Are"
+                    style="background-image: url('../Images/Cover\ of\ Just\ the\ Way\ You\ Are\ by\ Bruno\ Mars.jpg');">
+                    <button class="play-btn">▶</button>
+                </div>
+                <div class="cover song-cover" data-audio="../Audio/Lovers Rock - TV Girl.mp3" data-artist="TV Girl"
+                    data-title="Lovers Rock"
+                    style="background-image: url('../Images/Cover\ of\ Lovers\ Rock\ by\ TV\ Girl.jpg');">
+                    <button class="play-btn">▶</button>
+                </div>
+                <div class="cover song-cover" data-audio="../Audio/Perfect - Ed Sheeran.mp3" data-artist="Ed Sheeran"
+                    data-title="Perfect"
+                    style="background-image: url('../Images/Cover\ of\ Perfect\ by\ Ed\ Sheeran.jpg');">
+                    <button class="play-btn">▶</button>
+                </div>
+                <div class="cover song-cover" data-audio="../Audio/Beautiful Things - Benson Boone.mp3"
+                    data-artist="Bensone Boone" data-title="Beautiful Things"
+                    style="background-image: url('../Images/Cover\ of\ Beautiful\ Things\ by\ Benson\ Boone.jpg');">
+                    <button class="play-btn">▶</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="song-tile">
+            <div class="covers-container">
+                <div class="cover main-cover" id="Classical" style="background-image: url('../Images/classical.jpg');">
+                </div>
+                <div class="cover song-cover"
+                    data-audio="../Audio/Cello Suite No. 1 in G Major, BWV 1007_ I. Prélude - Johann Sebastian Bach.mp3"
+                    data-artist="Johann Sebastian Bach" data-title="Cello Suite No. 1 in G Major, BWV 1007_ I. Prélude"
+                    style="background-image: url('../Images/Cover\ of\ Cello\ Suite\ No.\ 1\ in\ G\ Major\,\ BWV\ 1007_\ I.\ Prélude\ by\ Johann\ Sebastian\ Bach\,\ Yo-Yo\ Ma.jpg');">
+                    <button class="play-btn">▶</button>
+                </div>
+                <div class="cover song-cover"
+                    data-audio="../Audio/Dawn (From _Pride & Prejudice_ Soundtrack) - Dario Marianelli.mp3" data-artist="Dario Marianelli" data-title="Dawn"
+                    style="background-image: url('../Images/Cover\ of\ Dawn\ \(From\ _Pride\ &\ Prejudice_\ Soundtrack\)\ by\ Dario\ Marianelli\,\ Jeneba\ Kanneh-Mason.jpg');">
+                    <button class="play-btn">▶</button>
+                </div>
+                <div class="cover song-cover" data-audio="../Audio/The Carnival of the Animals.mp3" data-artist="Camille Saint-Saëns" data-title="The Carnival of the Animals"
+                    style="background-image: url('../Images/Cover\ of\ The\ Carnival\ of\ the\ Animals.jpg');">
+                    <button class="play-btn">▶</button>
+                </div>
+                <div class="cover song-cover"
+                    data-audio="../Audio/The Marriage of Figaro Overture, KV 492 - Wolfgang Amadeus Mozart.mp3" data-artist="Wolfgang Amadeus Mozart" data-title="The Marriage of Figaro Overture"
+                    style="background-image: url('../Images/Cover\ of\ The\ Marriage\ of\ Figaro\ Overture\,\ KV\ 492\ by\ Wolfgang\ Amadeus\ Mozart.jpg');">
+                    <button class="play-btn">▶</button>
+                </div>
+                <div class="cover song-cover" data-audio="../Audio/Violin Concerto No. 2.mp3" data-artist="John Williams & Anne-Sophie Mutter" data-title="Violin Concerto No. 2"
+                    style="background-image: url('../Images/Cover\ of\ Violin\ Concerto\ No.\ 2.jpg');">
+                    <button class="play-btn">▶</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="song-tile">
+            <div class="covers-container">
+                <div class="cover main-cover" id="Pop" style="background-image: url('../Images/pop.jpg');"></div>
+                <div class="cover song-cover" data-audio="../Audio/The Spins - Mac Miller.mp3" data-artist="Mac Miller, Empire of The Sun" data-title="The Spins"
+                    style="background-image: url('../Images/Cover\ of\ The\ Spins\ by\ Mac\ Miller\,\ Empire\ Of\ The\ Sun.jpg');">
+                    <button class="play-btn">▶</button>
+                </div>
+                <div class="cover song-cover" data-audio="../Audio/Let's Get Loud.mp3" data-artist="Jennifer Lopez" data-title="Let's Get Loud"
+                    style="background-image: url('../Images/Cover\ of\ Let\'s\ Get\ Loud\ by\ Jennifer\ Lopez.jpg');">
+                    <button class="play-btn">▶</button>
+                </div>
+                <div class="cover song-cover"
+                    data-audio="../Audio/Call Me Maybe.mp3" data-artist="Carly Rae Jepsen" data-title="Call Me Maybe"
+                    style="background-image: url('../Images/Cover\ of\ Call\ Me\ Maybe\ by\ Carly\ Rae\ Jepsen.jpg');">
+                    <button class="play-btn">▶</button>
+                </div>
+                <div class="cover song-cover" data-audio="../Audio/Die With A Smile.mp3" data-artist="Lady Gaga, Bruno Mars" data-title="Die With A Smile"
+                    style="background-image: url('../Images/Cover\ of\ Die\ With\ A\ Smile\ by\ Lady\ Gaga\,\ Bruno\ Mars.jpg');">
+                    <button class="play-btn">▶</button>
+                </div>
+                <div class="cover song-cover" data-audio="../Audio/Radioactive.mp3" data-artist="Imagine Dragons" data-title="Radioactive"
+                    style="background-image: url('../Images/Cover\ of\ Radioactive\ by\ Imagine\ Dragons.jpg');">
+                    <button class="play-btn">▶</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="song-tile">
+            <div class="covers-container">
+                <div class="cover main-cover" id="Workout" style="background-image: url('../Images/workout.jpg');">
+                </div>
+                <div class="cover song-cover" data-audio="../Audio/fragment - slowed - slxughter.mp3" data-artist="slxughter" data-title="fragment"
+                    style="background-image: url('../Images/Cover\ of\ fragment\ -\ slowed\ by\ slxughter.jpg');">
+                    <button class="play-btn">▶</button>
+                </div>
+                <div class="cover song-cover" data-audio="../Audio/We Fell Apart - Slowed - ANGUISH.mp3" data-artist="ANGUISH" data-title="We Fell Apart - Slowed"
+                    style="background-image: url('../Images/Cover\ of\ We\ Fell\ Apart\ -\ Slowed\ by\ ANGUISH\,\ AmbVsh\,\ ily.jpg');">
+                    <button class="play-btn">▶</button>
+                </div>
+                <div class="cover song-cover" data-audio="../Audio/Angel - Massive Attack.mp3" data-artist="Massive Attack" data-title="Angel"
+                    style="background-image: url('../Images/Cover\ of\ Angel\ by\ Massive\ Attack\,\ Horace\ Andy.jpg');">
+                    <button class="play-btn">▶</button>
+                </div>
+                <div class="cover song-cover" data-audio="../Audio/Till I Collapse - Eminem.mp3" data-artist="Eminem" data-title="Till I Collapse"
+                    style="background-image: url('../Images/Cover\ of\ Till\ I\ Collapse\ by\ Eminem\,\ Nate\ Dogg.jpg');">
+                    <button class="play-btn">▶</button>
+                </div>
+                <div class="cover song-cover" data-audio="../Audio/Judas - Slowed & Reverb - Atieh.mp3" data-artist="Lady Gaga" data-title="Judas - Slowed & Reverb"
+                    style="background-image: url('../Images/Cover\ of\ Judas\ -\ Slowed\ &\ Reverb\ by\ Atieh.jpg');">
+                    <button class="play-btn">▶</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="song-tile">
+            <div class="covers-container">
+                <div class="cover main-cover" id="Hardcore" style="background-image: url('../Images/hardcore.png');">
+                </div>
+                <div class="cover song-cover" data-audio="../Audio/Hit The Floor - Bloodlust.mp3" data-artist="Bloodlust, HOLY PRIEST" data-title="Hit The Floor"
+                    style="background-image: url('../Images/Cover\ of\ Hit\ The\ Floor\ by\ Bloodlust\,\ HOLY\ PRIEST.jpg');">
+                    <button class="play-btn">▶</button>
+                </div>
+                <div class="cover song-cover" data-audio="../Audio/Attack - Remastered - Unexist.mp3" data-artist="Unexist" data-title="Attack - Remastered"
+                    style="background-image: url('../Images/Cover\ of\ Attack\ -\ Remastered\ by\ Unexist.jpg');">
+                    <button class="play-btn">▶</button>
+                </div>
+                <div class="cover song-cover" data-audio="../Audio/Vielleicht Vielleicht - Holy Priest.mp3" data-artist="HOLY PRIEST" data-title="Vielleicht Vielleicht"
+                    style="background-image: url('../Images/Cover\ of\ Vielleicht\ Vielleicht\ -\ Holy\ Priest.jpg');">
+                    <button class="play-btn">▶</button>
+                </div>
+                <div class="cover song-cover" data-audio="../Audio/LET'S GET FKD UP - Strong R. Remix - Alok.mp3" data-artist="Alok" data-title="LET'S GET FKD UP"
+                    style="background-image: url('../Images/Cover\ of\ LET\'S\ GET\ FKD\ UP\ -\ Strong\ R.\ Remix\ by\ Alok.jpg');">
+                    <button class="play-btn">▶</button>
+                </div>
+                <div class="cover song-cover" data-audio="../Audio/No Balance - HOLY PRIEST.mp3" data-artist="HOLY PRIEST" data-title="No Balance"
+                    style="background-image: url('../Images/Cover\ of\ No\ Balance\ by\ HOLY\ PRIEST\,\ Manji.jpg');">
+                    <button class="play-btn">▶</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="song-tile">
+            <div class="covers-container">
+                <div class="cover main-cover" id="Hip Hop" style="background-image: url('../Images/hiphop.png');"></div>
+                <div class="cover song-cover" data-audio="../Audio/If We Being Rëal - Yeat.mp3" style="background-image: url('../Images/Cover\ of\ If\ We\ Being\ Rëal\ by\ Yeat.jpg');" data-artist="Yeat" data-title="If We Being Rëal">
+                    <button class="play-btn">▶</button>
+                </div>
+                <div class="cover song-cover" data-audio="../Audio/Too Many Nights (feat. Don Toliver & with Future) - Metro Boomin.mp3" data-artist="Metro Boomin" data-title="Too Many Night (feat. Don Toliver & with Future)"
+                    style="background-image: url('../Images/Cover\ of\ Too\ Many\ Nights\ \(feat.\ Don\ Toliver\ &\ with\ Future\)\ by\ Metro\ Boomin\,\ Future\,\ Don\ Toliver.jpg');">
+                    <button class="play-btn">▶</button>
+                </div>
+                <div class="cover song-cover"
+                    data-audio="../Audio/Heartles - Kanye West.mp3" data-artist="Kanye West" data-title="Heartles"
+                    style="background-image: url('../Images/Cover\ of\ Heartless\ by\ Kanye\ West.jpg');">
+                    <button class="play-btn">▶</button>
+                </div>
+                <div class="cover song-cover" data-audio="../Audio/Mockingbird - Eminem.mp3" data-artist="Eminem" data-title="Mockingbird"
+                    style="background-image: url('../Images/Cover\ of\ Mockingbird\ by\ Eminem.jpg');">
+                    <button class="play-btn">▶</button>
+                </div>
+                <div class="cover song-cover" data-audio="../Audio/Everyday (feat. Rod Stewart, Miguel & Mark Ronson) - A$AP Rocky.mp3" data-artist="A$AP Rocky" data-title="Everyday (feat. Rod Stewart, Miguel & Mark Ronson)"
+                    style="background-image: url('../Images/Cover\ of\ Everyday\ \(feat.\ Rod\ Stewart\,\ Miguel\ &\ Mark\ Ronson\)\ by\ A$AP\ Rocky\,\ Rod\ Stewart\,\ Miguel\,\ Mark\ Ronson.jpg');">
+                    <button class="play-btn">▶</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="song-tile">
+            <div class="covers-container">
+                <div class="cover main-cover" id="Metal" style="background-image: url('../Images/metal.webp');"></div>
+                <div class="cover song-cover" data-audio="../Audio/Sweet Child O' Mine.mp3" data-artist="Guns N' Roses" data-title="Sweet Child O' Mine"
+                    style="background-image: url('../Images/Cover\ Sweet\ Child\ O\'\ Mine.jpg');">
+                    <button class="play-btn">▶</button>
+                </div>
+                <div class="cover song-cover" data-audio="../Audio/Enter Sandman - Remastered 2021.mp3" data-artist="Metallica" data-title="Enter Sandman - Remastered 2021"
+                    style="background-image: url('../Images/Cover\ of\ Enter\ Sandman\ -\ Remastered\ 2021\ by\ Metallica.jpg');">
+                    <button class="play-btn">▶</button>
+                </div>
+                <div class="cover song-cover"
+                    data-audio="../Audio/I Was Made For Lovin' You.mp3" data-artist="KISS" data-title="I Was Made For Lovin' You"
+                    style="background-image: url('../Images/Cover\ of\ I\ Was\ Made\ For\ Lovin\'\ You\ by\ KISS.jpg');">
+                    <button class="play-btn">▶</button>
+                </div>
+                <div class="cover song-cover" data-audio="../Audio/Kickstart My Heart.mp3" data-artist="Mötley Crüe" data-title="Kickstart My Heart"
+                    style="background-image: url('../Images/Cover\ of\ Kickstart\ My\ Heart\ by\ Mötley\ Crüe.jpg');">
+                    <button class="play-btn">▶</button>
+                </div>
+                <div class="cover song-cover" data-audio="../Audio/Master Of Puppets.mp3" data-artist="Metallica" data-title="Master Of Puppets"
+                    style="background-image: url('../Images/Cover\ of\ Master\ Of\ Puppets\ by\ Metallica.jpg');">
+                    <button class="play-btn">▶</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer style="margin-top: 20px; margin-bottom: 100px;">
+        <p>
+            &copy; 2026 SoundAngel. All Rights Reserved.
+        </p>
+    </footer>
+
+    <div class="PlayBackBar">
+
+        <div class="LeftSection">
+            <input class="TimeStamp" id="TimeStamp" type="range" min="0" max="400" value="0">
+        </div>
+
+        <div class="CenterSection">
+            <div class="play-like-wrapper">
+                <img src="../Images/like.png" class="LikeButton">
+
+                <button id="PlayBackPlayButton">
+                    <span class="symbol">▶</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="NowPlayingSection">
+            <span id="NowPlayingText"></span>
+        </div>
+
+        <div class="RightSection">
+            <img src="../Images/volume_white.png" class="VolumeIcon">
+            <input class="VolumeSlider" type="range" min="0" max="100" value="50">
+        </div>
+
+    </div>
+
+    <script>
+        function updateNowPlaying(coverElement) {
+            const artist = coverElement.dataset.artist || "Unknown Artist";
+            const title = coverElement.dataset.title || "Unknown Title";
+
+            document.getElementById("NowPlayingText").textContent = `${artist} – ${title}`;
+        }
+
+        const player = new Audio();
+
+        const timeStamp = document.getElementById("TimeStamp");
+
+        player.addEventListener("loadedmetadata", () => {
+            timeStamp.max = Math.floor(player.duration);
+        });
+
+        player.addEventListener("timeupdate", () => {
+            if (!timeStamp.dragging) {
+                timeStamp.value = Math.floor(player.currentTime);
+            }
+        });
+
+        timeStamp.addEventListener("mousedown", () => {
+            timeStamp.dragging = true;
+
+            timeStamp.addEventListener("mouseup", (e) => {
+                timeStamp.dragging = false;
+                player.currentTime = timeStamp.value;
+            });
+        });
+
+        const barPlayBtn = document.getElementById("PlayBackPlayButton");
+        const barPlayBtnSpan = barPlayBtn.querySelector(".symbol");
+
+        const volumeSlider = document.querySelector('.VolumeSlider');
+
+        let currentBtn = null;
+        let currentAudioSrc = "";
+
+        volumeSlider.addEventListener('input', () => {
+            player.volume = volumeSlider.value / 100;
+        });
+
+        document.querySelectorAll('.song-cover').forEach(cover => {
+            const audioSrc = cover.dataset.audio;
+            const btn = cover.querySelector('.play-btn');
+
+            btn.addEventListener('click', () => {
+                if (currentAudioSrc !== audioSrc) {
+                    player.src = audioSrc;
+                    player.play();
+
+                    updateNowPlaying(cover);
+
+                    if (currentBtn) currentBtn.textContent = "▶";
+
+                    btn.textContent = "⏸";
+                    barPlayBtnSpan.textContent = "⏸";
+                    barPlayBtnSpan.classList.add("pause");
+
+                    currentBtn = btn;
+                    currentAudioSrc = audioSrc;
+                    return;
+                }
+
+                if (player.paused) {
+                    player.play();
+                    btn.textContent = "⏸";
+                    barPlayBtnSpan.textContent = "⏸";
+                    barPlayBtnSpan.classList.add("pause");
+                } else {
+                    player.pause();
+                    btn.textContent = "▶";
+                    barPlayBtnSpan.textContent = "▶";
+                    barPlayBtnSpan.classList.remove("pause");
+                }
+            });
+        });
+
+        barPlayBtn.addEventListener('click', () => {
+            if (!player.src) return;
+
+            if (player.paused) {
+                player.play();
+                barPlayBtnSpan.textContent = "⏸";
+                barPlayBtnSpan.classList.add("pause");
+                if (currentBtn) currentBtn.textContent = "⏸";
+            } else {
+                player.pause();
+                barPlayBtnSpan.textContent = "▶";
+                barPlayBtnSpan.classList.remove("pause");
+                if (currentBtn) currentBtn.textContent = "▶";
+            }
+        });
+
+        player.addEventListener("ended", () => {
+            barPlayBtnSpan.textContent = "▶";
+            barPlayBtnSpan.classList.remove("pause");
+            if (currentBtn) currentBtn.textContent = "▶";
+        });
+
+        document.querySelectorAll(".covers-container").forEach(container => {
+            container.addEventListener("mouseenter", () => {
+                container.classList.add("opened");
+            });
+        });
+    </script>
+
+</body>
+
+</html>

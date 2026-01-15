@@ -1,0 +1,47 @@
+<!-- Enhanced version of library.html with playlist cards, library management, and audio player -->
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../Sources/library_style.css" />
+    
+    <link rel="icon" href="/SoundAngel/Images/logoico.ico" />
+
+
+</head>
+<body>
+
+    <div id="NavBar">
+        <a href="../Sources/index.html">
+            <img src="../Images/LogLogLog.png" id="logo" />
+        </a>
+        <a href="../Sources/discovery.html">DISCOVERY</a>
+        <a href="../Sources/library.html">LIBRARY</a>  
+    </div>
+
+
+    <div class="main">
+      <!-- LEFT SIDEBAR: Add Track + Library List -->
+      <div class="sidebar">
+        <div id="libraryList" class="list"></div>
+      </div>
+
+      <!-- CENTER: Playlist Cards -->
+      <div>
+        <h2 style="text-align:center;margin-bottom:10px;"  class="text-light">Playlists</h2>
+        <div id="playlistCards" class="playlist-cards"></div>
+      </div>
+    </div>
+
+    
+
+<script src="../Sources/library.js"></script>
+
+<footer style="text-align:center;margin-top:40px;padding:20px;color:#777;">
+  &copy; 2025 SoundAngel. All Rights Reserved.
+</footer>
+</body>
+</html>
