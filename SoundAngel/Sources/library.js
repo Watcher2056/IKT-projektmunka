@@ -16,12 +16,14 @@ function renderPlaylists(){
   const addCard = document.createElement('div');
   addCard.className = 'playlist-card';
   addCard.innerHTML = `
-    <div class="card" id="New-list" style="width: 18rem;">
-  <img src="../Images/Plus icon.png" class="card-img-top" alt="...">
-  <div class="card-body">
-    <div class="playlist-card-name text-center"><h5>New Playlist</h5></div>
+  <div class="col">
+    <div class="card" id="New-list" style="width: 18rem; margin-right: 0px;">
+      <img src="../Images/Plus icon.png" class="card-img-top" alt="Plus icon">
+      <div class="card-body">
+      <div class="playlist-card-name text-center"><h5>New Playlist</h5></div>
+      </div>
+    </div>
   </div>
-</div>
     
   `;
   addCard.onclick = () => {
@@ -38,13 +40,15 @@ function renderPlaylists(){
     const card = document.createElement('div');
     card.className = 'playlist-card';
     card.innerHTML = `
+    <div class="col">
       <div class="card" style="width: 18rem;">
-  <img src="../Images/Plus icon.png" class="card-img-top" alt="...">
-  <div class="card-body">
-    <div class="playlist-card-name">${name}</div>
-    <button class="btn btn-danger" data-del>Delete</button>
-  </div>
-</div>
+        <img src="../Images/Note icon.jpg" class="card-img-top" alt="Note icon">
+        <div class="card-body">
+        <div class="playlist-card-name text-center">${name}</div>
+        <button class="btn btn-danger" data-del>Delete</button>
+        </div>
+      </div>
+    </div>
       
     `;
 
