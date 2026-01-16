@@ -49,9 +49,10 @@ footer{
     color: white;
 }
 
-
 #New-list{
     transition: 0.1s;
+    flex-direction: row;
+
 }
 #New-list:hover{
     box-shadow: 3px 3px 3px white;

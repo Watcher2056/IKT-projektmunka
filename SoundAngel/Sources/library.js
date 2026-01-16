@@ -1,4 +1,3 @@
-// SoundAngel – Playlist Creation Only
 
 // Load playlists from localStorage or initialize
 let playlists = JSON.parse(localStorage.getItem("lib_playlists") || '{"My Playlist": []}');
@@ -14,7 +13,7 @@ function renderPlaylists(){
 
   // New Playlist card
   const addCard = document.createElement('div');
-  addCard.className = 'playlist-card';
+  addCard.className = 'Add-playlist';
   addCard.innerHTML = `
   <div class="col">
     <div class="card" id="New-list" style="width: 18rem; margin-right: 0px;">
@@ -38,20 +37,19 @@ function renderPlaylists(){
   // Existing playlists
   Object.keys(playlists).forEach(name => {
     const card = document.createElement('div');
-    card.className = 'playlist-card';
+    card.className = 'col';
     card.innerHTML = `
-    <div class="col">
-      <div class="card" style="width: 18rem;">
+
+      <div class="card" id="New-list" style="width: 18rem;">
         <img src="../Images/Note icon.jpg" class="card-img-top" alt="Note icon">
         <div class="card-body">
         <div class="playlist-card-name text-center">${name}</div>
         <button class="btn btn-danger" data-del>Delete</button>
         </div>
-      </div>
-    </div>
+
       
     `;
-
+// Playlist deletion
       card.querySelector('[data-del]').onclick = (e) => {
       e.stopPropagation();
       if (!confirm(`Delete playlist '${name}'?`)) return;
